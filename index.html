@@ -193,7 +193,7 @@ tr:last-child td{border-bottom:0}
   }catch(e){}
 
   var params=new URLSearchParams(location.search);
-  var CUR=(params.get('currency')||'GBP').toUpperCase();
+  var CUR=(params.get('currency')||'EUR').toUpperCase();
   var fmt=new Intl.NumberFormat('en-GB',{style:'currency',currency:CUR,maximumFractionDigits:0});
   var fmtK=function(n){return n>=1e6?fmt.format(n/1e6).replace(/(\d)$/,'$1')+'M':n>=1e4?fmt.format(Math.round(n/1e3))+'k':fmt.format(n);};
   var money=function(n){return fmt.format(Math.round(n));};
